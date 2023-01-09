@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "package-without-webpacked-output",
+  "packageName": "@microsoft/teams-js",
+  "email": "felescoto95@hotmail.com",
+  "dependentChangeType": "patch"
+}
