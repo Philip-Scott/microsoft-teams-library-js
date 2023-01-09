@@ -3,9 +3,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "declarationDir": "./dts",
-    "target": "es5",
+    "target": "es2020",
     "lib": ["ES5", "DOM", "ES2015.promise"],
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "noResolve": false,
     "noImplicitAny": false,
@@ -14,5 +14,5 @@
     "sourceMap": true,
     "declaration": true
   },
-  "exclude": ["node_modules", "./test", "./webpack.config.ts"]
+  "exclude": ["dist", "dts", "node_modules", "./test", "./webpack.config.ts"]
 }

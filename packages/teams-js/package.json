@@ -8,16 +8,19 @@
     "type": "git",
     "url": "https://github.com/OfficeDev/microsoft-teams-library-js"
   },
-  "main": "./dist/MicrosoftTeams.min.js",
-  "typings": "./dist/MicrosoftTeams.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "typings": "./dts/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "build": "yarn lint && webpack && yarn docs:validate",
+    "build": "node ../../node_modules/typescript/bin/tsc",
     "clean": "rimraf ./dist",
     "docs": "yarn typedoc",
     "docs:validate": "yarn typedoc --treatWarningsAsErrors --emit none",
     "lint": "yarn eslint ./src ./test --max-warnings 0 --fix --ext .ts",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
-    "test": "jest"
+    "test": "jest",
+    "tar": "tar -czvf teams-js.gz ../teams-js/"
   },
   "dependencies": {
     "debug": "4.3.3"
@@ -28,6 +31,7 @@
   "license": "MIT",
   "files": [
     "dist/**",
+    "dts/**",
     "LICENSE",
     "README.md"
   ]
