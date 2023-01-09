@@ -1,16 +1,16 @@
 {
-  "name": "@microsoft/teams-js",
+  "name": "@philip-scott/teams-js",
   "author": "Microsoft Teams",
   "version": "2.7.1",
   "description": "Microsoft Client SDK for building app for Microsoft hosts",
   "repository": {
     "directory": "packages/teams-js",
     "type": "git",
-    "url": "https://github.com/OfficeDev/microsoft-teams-library-js"
+    "url": "https://github.com/philip-scott/microsoft-teams-library-js"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "typings": "./dts/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "node ../../node_modules/typescript/bin/tsc",
@@ -19,8 +19,7 @@
     "docs:validate": "yarn typedoc --treatWarningsAsErrors --emit none",
     "lint": "yarn eslint ./src ./test --max-warnings 0 --fix --ext .ts",
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
-    "test": "jest",
-    "tar": "tar -czvf teams-js.gz ../teams-js/"
+    "test": "jest"
   },
   "dependencies": {
     "debug": "4.3.3"
@@ -31,7 +30,6 @@
   "license": "MIT",
   "files": [
     "dist/**",
-    "dts/**",
     "LICENSE",
     "README.md"
   ]
